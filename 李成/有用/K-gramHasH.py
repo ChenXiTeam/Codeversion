@@ -1,3 +1,6 @@
+#代码相似度，k-gramHasH算法，可用
+#存在继续优化的可能性
+
 #先使用文本进行测试
 #标点符合去掉
 excludes = {'，','。','/','《','》','？','；','‘','：','“','【','】','{','}',
@@ -95,7 +98,7 @@ def getCvalue(WinSize,hashValues):
             break
 
         tmplist = hashValues[i:i+WinSize]
-        print(tmplist)
+        #print(tmplist)
         # minHash = tmplist[WinSize-1]
         # minpos = WinSize+i-1
 
@@ -146,22 +149,15 @@ if __name__ == '__main__':
     # print(getCvalue(4,hashValues))
 
 
-    # txt1 = getThetxt("C:/Users/60917/Desktop/第一章.txt")
-    # txt2 = getThetxt("C:/Users/60917/Desktop/第二章.txt")
+    txt1 = getThetxt("C:/Users/60917/Desktop/第一章.txt")
+    txt2 = getThetxt("C:/Users/60917/Desktop/第二章.txt")
     K = 3
     WindowsSize = 4
-    # list1 = generateKgram(txt1, K)
-    # list2 = generateKgram(txt2, K)
-    # list_1 = generateHash1(2,list1,K)
-    # list_2 = generateHash1(2,list2,K)
-    # dict1 =  getCvalue(WindowsSize, list_1)
-    # dict2 = getCvalue(WindowsSize, list_2)
-    #
-    # print(sim(dict1,dict2))
-    list2 = generateKgram("yabbadabbadoo",K)
-    print(list2)
-    list3 = generateHash1(2,list2,K)
-    print(list3)
-    list4 = getCvalue(WindowsSize, list3)
-    print(list4)
+    list1 = generateKgram(txt1, K)
+    list2 = generateKgram(txt2, K)
+    list_1 = generateHash1(2,list1,K)
+    list_2 = generateHash1(2,list2,K)
+    dict1 =  getCvalue(WindowsSize, list_1)
+    dict2 = getCvalue(WindowsSize, list_2)
 
+    print(sim(dict1,dict2))

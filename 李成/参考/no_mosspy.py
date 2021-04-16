@@ -1,8 +1,9 @@
-import mosspy
+#调用mosspy来进行分析，不可用。
+import no_mosspy
 
 userid = 987654321
 
-m = mosspy.Moss(userid, "python")
+m = no_mosspy.Moss(userid, "python")
 
 m.addBaseFile("submission/a01.py")
 m.addBaseFile("submission/test_student.py")
@@ -23,6 +24,6 @@ print ("Report Url: " + url)
 m.saveWebPage(url, "submission/report.html")
 
 # Download whole report locally including code diff links
-mosspy.download_report(url, "submission/report/", connections=8, log_level=10, on_read=lambda url: print('*', end='', flush=True))
+no_mosspy.download_report(url, "submission/report/", connections=8, log_level=10, on_read=lambda url: print('*', end='', flush=True))
 # log_level=logging.DEBUG (20 to disable)
 # on_read function run for every downloaded file

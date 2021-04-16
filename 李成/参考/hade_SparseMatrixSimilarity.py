@@ -1,3 +1,5 @@
+#通过tfidf-稀疏向量计算相似度
+#我记的有更好的实现
 import jieba
 import gensim
 
@@ -9,6 +11,7 @@ def getWordsFromList(str):
     return words
 
 string = ['我是李成，大家好','我是牛翔宇，大家下午好。']
+
 #print("#")
 #print(jieba.user_word_tag_tab)
 

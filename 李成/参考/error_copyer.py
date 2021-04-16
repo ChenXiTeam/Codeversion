@@ -1,19 +1,13 @@
-# -*- coding: utf-8 -*-
-# @Time        : 2019/6/25 15:58
-# @Author      : tianyunzqs
-# @Description :
+#汉明距离，需要调试
 
 import codecs
 import numpy as np
 import jieba.posseg as pseg
 
-
 def load_stopwords(path):
     return set([line.strip() for line in open(path, "r", encoding="utf-8").readlines() if line.strip()])
 
-
 stopwords = load_stopwords(path='C:/Users/60917/Desktop/StopWords.txt')
-
 
 def string_hash(source):
     if not source:
@@ -98,7 +92,7 @@ def text_simhash(text):
 def simhash_similarity(text1, text2):
     simhash_code1 = text_simhash(text1)
     simhash_code2 = text_simhash(text2)
-    print(simhash_code1, simhash_code2)
+    #print(simhash_code1, simhash_code2)
     return hamming_distance(simhash_code1, simhash_code2)
 
 

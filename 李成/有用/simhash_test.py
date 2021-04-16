@@ -1,4 +1,5 @@
 #simhash_test.py
+#可堪一用
 from simhash import Simhash
 #去掉标点符号
 excludes = {'，','。','/','《','》','？','；','‘','：','“','【','】','{','}',

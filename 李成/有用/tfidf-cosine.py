@@ -1,6 +1,8 @@
+#名字就是算法，可用
+
 import math
 
-from tfidfOfM import getTheTFIDF
+from userful.tfidfOfM import getTheTFIDF
 
 excludes = {'，','。','/','《','》','？','；','‘','：','“','【','】','{','}',
             '、','|','！','@','#','￥','%','……','&','*','（','）','-','=',

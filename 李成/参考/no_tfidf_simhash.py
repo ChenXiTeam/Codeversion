@@ -1,4 +1,5 @@
 import codecs
+#有待改进
 
 import jieba
 import numpy as np
